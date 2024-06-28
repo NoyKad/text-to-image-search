@@ -1,7 +1,8 @@
--- export "media" table to csv file
+-- export "media" table to csv file and add header
 USE media_tagging;
-SELECT * FROM media
-INTO OUTFILE '/var/lib/mysql-files/media.csv'
-FIELDS TERMINATED BY ',' 
-OPTIONALLY ENCLOSED BY '"' 
-LINES TERMINATED BY '\n';
+
+SELECT 'url', 'descriptionHebrew', 'descriptionEnglish', 'tags'
+UNION ALL
+SELECT url, descriptionHebrew, descriptionEnglish, tags
+    FROM media
+    INTO OUTFILE '/var/lib/mysql-files/media.csv';
