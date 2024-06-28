@@ -18,5 +18,3 @@ CREATE TABLE IF NOT EXISTS media (
 
 SHOW TABLES;
 source ./data/kalos-media-tagging-fixed.sql;
-
-SELECT * FROM media WHERE id < 30;
