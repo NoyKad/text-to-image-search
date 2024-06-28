@@ -12,7 +12,7 @@ try:
     query = "Select * from media;"
     result_dataFrame = pd.read_sql(query, mydb)
 
-    print(result_dataFrame.head())
+    result_dataFrame.to_csv('./data/media.csv')
 
     mydb.close() #close the connection
 except Exception as e:
