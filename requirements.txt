@@ -4,5 +4,7 @@ pillow
 pyarrow
 requests
 streamlit
-torch
 transformers
+
+--extra-index-url https://download.pytorch.org/whl/cpu
+torch
