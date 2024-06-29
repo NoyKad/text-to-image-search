@@ -1,7 +1,8 @@
-pandas
 mysql-connector-python
-requests
+pandas
 pillow
 pyarrow
-transformers
+requests
+streamlit
 torch
+transformers
