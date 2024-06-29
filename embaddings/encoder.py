@@ -9,7 +9,7 @@ from transformers import BertModel, BertTokenizerFast
 
 
 class BERTEncoder:
-    def __init__(self, model_name="onlplab/alephbert-base", embed_method="mean"):
+    def __init__(self, model_name="onlplab/alephbert-base", embed_method="cls"):
         self.embed_method = embed_method
         self.tokenizer = BertTokenizerFast.from_pretrained(model_name)
         self.model = BertModel.from_pretrained(model_name)
