@@ -1,5 +1,3 @@
-#! /usr/bin/env mysql
-
 -- make sure to fix edit the table name to 'media'
 -- name the fixed .sql with -fixed suffix
 
@@ -17,4 +15,4 @@ CREATE TABLE IF NOT EXISTS media (
 );
 
 SHOW TABLES;
-source ./data/kalos-media-tagging-fixed.sql;
+source ../data/kalos-media-tagging-fixed.sql;
