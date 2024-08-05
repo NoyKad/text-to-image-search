@@ -1,13 +1,19 @@
+import os
+
+from dotenv import load_dotenv
 import mysql.connector as connection
 import pandas as pd
+
+load_dotenv()
+
 try:
     mydb = connection.connect(
-            host="127.0.0.1", 
-            user="root",
-            password="5019",
-            database='media_tagging',
-            use_pure=True
-            )
+        host=os.getenv('DB_HOST'),
+        user=os.getenv('DB_USER'),
+        password=os.getenv('DB_PASSWORD'),
+        database=os.getenv('DB_NAME'),
+        use_pure=True
+    )
     
     query = "Select * from media;"
     result_dataFrame = pd.read_sql(query, mydb)
