@@ -2,6 +2,7 @@ mysql-connector-python
 pandas
 pillow
 pyarrow
+python-dotenv
 requests
 streamlit
 transformers
